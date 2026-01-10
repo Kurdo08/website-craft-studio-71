@@ -1,23 +1,191 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Star, Quote, ArrowRight } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/hooks/useScrollAnimation';
 
 const TestimonialsPage = () => {
   const { t } = useLanguage();
+
+  const testimonials = [
+    {
+      name: 'Sarah de Jong',
+      company: 'TechFlow Solutions',
+      role: 'CEO',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80',
+      text: 'Fantastische samenwerking! Het team begreep precies wat we nodig hadden en leverde een website die onze verwachtingen overtrof. De communicatie was helder en het resultaat is prachtig.',
+      rating: 5,
+      projectImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    },
+    {
+      name: 'Mark van der Berg',
+      company: 'ModaStyle Boutique',
+      role: 'Eigenaar',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80',
+      text: 'De webshop is precies wat we zochten. Professioneel, snel en gebruiksvriendelijk. De klantenservice is ook top. Onze online verkopen zijn met 60% gestegen!',
+      rating: 5,
+      projectImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
+    },
+    {
+      name: 'Lisa Bakker',
+      company: 'GreenLeaf Catering',
+      role: 'Marketing Manager',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80',
+      text: 'Van eerste contact tot oplevering, alles verliep soepel. De website past perfect bij ons merk en onze klanten zijn enthousiast.',
+      rating: 5,
+      projectImage: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
+    },
+    {
+      name: 'Peter Janssen',
+      company: 'Janssen Advocaten',
+      role: 'Partner',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80',
+      text: 'Een professionele en betrouwbare partner. De nieuwe website straalt kwaliteit uit, precies wat we wilden voor ons advocatenkantoor.',
+      rating: 5,
+      projectImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80',
+    },
+    {
+      name: 'Emma Visser',
+      company: 'Fit & Gezond Studio',
+      role: 'Eigenaar',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80',
+      text: 'Dankzij de nieuwe website zijn onze boekingen met 40% gestegen. Ongelooflijk resultaat! Het team denkt echt mee en geeft waardevolle adviezen.',
+      rating: 5,
+      projectImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
+    },
+    {
+      name: 'Robert Klein',
+      company: 'Klein Architecten',
+      role: 'Directeur',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80',
+      text: 'Onze portfolio website is een waar meesterwerk geworden. De aandacht voor detail en het begrip voor onze branche was indrukwekkend.',
+      rating: 5,
+      projectImage: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80',
+    },
+  ];
+
+  const stats = [
+    { value: '150+', label: 'Projecten Afgerond' },
+    { value: '98%', label: 'Tevreden Klanten' },
+    { value: '5★', label: 'Gemiddelde Beoordeling' },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24">
-        <section className="section-padding bg-gradient-luxury relative">
-          <div className="absolute inset-0 opacity-20 bg-noise mix-blend-overlay" />
-          <div className="container mx-auto container-padding relative text-center">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">{t.pages.testimonials.hero}</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t.pages.testimonials.heroSubtitle}</p>
+        {/* Hero with Image */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80" 
+              alt="Happy clients"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
+          </div>
+          <div className="container mx-auto container-padding relative">
+            <div className="max-w-2xl">
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">{t.pages.testimonials.hero}</h1>
+              <p className="text-lg text-muted-foreground mb-8">{t.pages.testimonials.heroSubtitle}</p>
+              
+              {/* Stats */}
+              <div className="flex gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index}>
+                    <div className="text-2xl font-display font-bold text-primary">{stat.value}</div>
+                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
-        <TestimonialsSection />
+
+        {/* Testimonials Grid */}
+        <section className="section-padding">
+          <motion.div 
+            className="container mx-auto container-padding"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="grid md:grid-cols-2 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div key={index} variants={fadeInUp}>
+                  <Card className="bg-card hover:bg-card transition-all duration-500 border-border/50 hover:border-primary/30 hover:shadow-xl h-full overflow-hidden">
+                    {/* Project Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={testimonial.projectImage} 
+                        alt={`Project for ${testimonial.company}`}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+                    </div>
+                    
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
+                        />
+                        <div>
+                          <p className="font-medium text-foreground">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}, {testimonial.company}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                        ))}
+                      </div>
+
+                      <div className="flex gap-2 mb-4">
+                        <Quote className="w-8 h-8 text-primary/30 flex-shrink-0" />
+                        <p className="text-foreground leading-relaxed">
+                          {testimonial.text}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA Section */}
+            <motion.div 
+              className="mt-16 relative rounded-2xl overflow-hidden"
+              variants={fadeInUp}
+            >
+              <div className="absolute inset-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" 
+                  alt="Team meeting"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-navy opacity-90" />
+              </div>
+              <div className="relative py-16 px-8 text-center">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+                  Word onze volgende tevreden klant
+                </h2>
+                <p className="text-white/80 mb-6 max-w-xl mx-auto">
+                  Start vandaag nog met uw project en ervaar zelf waarom onze klanten zo enthousiast zijn
+                </p>
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 h-12 px-8">
+                  <Link to="/quote">Start Uw Project<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                </Button>
+              </div>
+            </motion.div>
+          </motion.div>
+        </section>
       </main>
       <Footer />
     </div>
