@@ -2,7 +2,6 @@ export type Language = 'nl' | 'en';
 
 export const translations = {
   nl: {
-    // Navigation
     nav: {
       home: 'Home',
       portfolio: 'Portfolio',
@@ -12,16 +11,14 @@ export const translations = {
       quote: 'Offerte',
       contact: 'Contact',
     },
-    // Hero Section
     hero: {
       badge: 'Premium Webdesign Bureau',
       title: 'Wij creëren',
       titleHighlight: 'digitale meesterwerken',
-      subtitle: 'Exclusieve websites die uw merk naar een hoger niveau tillen. Vakmanschap, verfijning en resultaat - dat is onze belofte.',
+      subtitle: 'Exclusieve websites die uw merk naar een hoger niveau tillen. Vakmanschap, verfijning en resultaat.',
       cta: 'Start Uw Project',
       ctaSecondary: 'Bekijk Ons Werk',
     },
-    // Services
     services: {
       title: 'Onze Expertise',
       subtitle: 'Vakmanschap in elk digitaal aspect',
@@ -47,30 +44,28 @@ export const translations = {
       },
       cta: 'Meer Informatie',
     },
-    // Why Choose Us / About
     about: {
       title: 'Waarom Wij?',
-      subtitle: 'Meer dan een bureau - uw digitale partner',
+      subtitle: 'Uw digitale partner',
       experience: {
-        title: 'Jarenlange Expertise',
+        title: 'Expertise',
         description: 'Met meer dan 150 succesvolle projecten weten wij precies wat werkt.',
       },
       custom: {
-        title: 'Exclusief Maatwerk',
-        description: 'Geen templates. Elk project is een uniek kunstwerk op maat.',
+        title: 'Maatwerk',
+        description: 'Geen templates. Elk project is een uniek kunstwerk.',
       },
       support: {
-        title: 'Persoonlijke Aanpak',
-        description: 'Direct contact met uw dedicated projectmanager.',
+        title: 'Persoonlijk',
+        description: 'Direct contact met uw projectmanager.',
       },
       results: {
-        title: 'Meetbaar Resultaat',
-        description: 'Websites die niet alleen imponeren, maar ook converteren.',
+        title: 'Resultaat',
+        description: 'Websites die imponeren én converteren.',
       },
       story: 'Ons Verhaal',
-      storyText: 'Al meer dan vijf jaar helpen wij ambitieuze bedrijven hun digitale aanwezigheid te transformeren. Wij geloven dat elke website een meesterwerk kan zijn - een perfecte balans tussen esthetiek en functionaliteit.',
+      storyText: 'Al meer dan vijf jaar helpen wij ambitieuze bedrijven hun digitale aanwezigheid te transformeren.',
     },
-    // Portfolio
     portfolio: {
       title: 'Ons Portfolio',
       subtitle: 'Ontdek onze meest recente meesterwerken',
@@ -86,13 +81,11 @@ export const translations = {
       nextProject: 'Volgend Project',
       prevProject: 'Vorig Project',
     },
-    // Testimonials
     testimonials: {
       title: 'Wat Klanten Zeggen',
       subtitle: 'Ervaringen van tevreden opdrachtgevers',
       readMore: 'Lees Meer Reviews',
     },
-    // Quote Form
     quote: {
       title: 'Start Uw Project',
       subtitle: 'Deel uw visie en ontvang binnen 24 uur een persoonlijke offerte',
@@ -119,26 +112,25 @@ export const translations = {
         },
         budget: 'Budget Indicatie',
         budgets: {
-          starter: '€2.500 - €5.000',
-          medium: '€5.000 - €10.000',
-          premium: '€10.000 - €25.000',
-          enterprise: '€25.000+',
+          starter: '€50 - €250',
+          medium: '€250 - €500',
+          premium: '€500 - €1.000',
+          enterprise: '€1.000+',
           unknown: 'Bespreek ik graag',
         },
         deadline: 'Gewenste Opleverdatum',
         description: 'Projectomschrijving',
         descriptionPlaceholder: 'Beschrijf uw visie, doelen en eventuele inspiratie...',
-        files: 'Documenten Uploaden',
-        filesDescription: 'Upload uw logo, huisstijl of inspiratie materiaal',
+        files: 'Documenten Uploaden (indien nodig)',
+        filesDescription: 'Upload uw logo, huisstijl of inspiratie materiaal - optioneel',
         submit: 'Verstuur Aanvraag',
         submitting: 'Versturen...',
         success: 'Bedankt voor uw aanvraag! Wij nemen binnen 24 uur persoonlijk contact met u op.',
       },
     },
-    // Contact
     contact: {
       title: 'Contact',
-      subtitle: 'Laten we kennismaken',
+      subtitle: 'Neem contact op',
       phone: 'Telefoon',
       email: 'E-mail',
       whatsapp: 'WhatsApp',
@@ -148,9 +140,8 @@ export const translations = {
       emailUs: 'Stuur E-mail',
       schedule: 'Plan Gesprek',
     },
-    // Footer
     footer: {
-      description: 'Premium webdesign voor ambitieuze merken die willen opvallen.',
+      description: 'Premium webdesign voor ambitieuze merken.',
       quickLinks: 'Navigatie',
       services: 'Diensten',
       contact: 'Contact',
@@ -158,30 +149,28 @@ export const translations = {
       privacy: 'Privacybeleid',
       terms: 'Algemene Voorwaarden',
     },
-    // Common
     common: {
       learnMore: 'Meer Info',
       getStarted: 'Aan de Slag',
       viewAll: 'Bekijk Alles',
       back: 'Terug',
     },
-    // Pages
     pages: {
       services: {
         hero: 'Onze Diensten',
-        heroSubtitle: 'Van concept tot lancering - wij leveren excellentie op elk niveau',
+        heroSubtitle: 'Van concept tot lancering - wij leveren excellentie',
       },
       portfolio: {
         hero: 'Ons Portfolio',
-        heroSubtitle: 'Ontdek hoe wij merken transformeren naar digitale meesterwerken',
+        heroSubtitle: 'Ontdek hoe wij merken transformeren',
       },
       about: {
         hero: 'Over WebStudio',
-        heroSubtitle: 'De passie en expertise achter uw digitale succes',
+        heroSubtitle: 'De passie achter uw digitale succes',
       },
       testimonials: {
-        hero: 'Klantervaringen',
-        heroSubtitle: 'Ontdek waarom bedrijven voor ons kiezen',
+        hero: 'Wat Klanten Zeggen',
+        heroSubtitle: 'Ervaringen van tevreden opdrachtgevers',
       },
       quote: {
         hero: 'Start Uw Project',
@@ -194,7 +183,6 @@ export const translations = {
     },
   },
   en: {
-    // Navigation
     nav: {
       home: 'Home',
       portfolio: 'Portfolio',
@@ -204,32 +192,30 @@ export const translations = {
       quote: 'Quote',
       contact: 'Contact',
     },
-    // Hero Section
     hero: {
       badge: 'Premium Web Design Agency',
       title: 'We create',
       titleHighlight: 'digital masterpieces',
-      subtitle: 'Exclusive websites that elevate your brand to new heights. Craftsmanship, refinement and results - that is our promise.',
+      subtitle: 'Exclusive websites that elevate your brand. Craftsmanship, refinement and results.',
       cta: 'Start Your Project',
       ctaSecondary: 'View Our Work',
     },
-    // Services
     services: {
       title: 'Our Expertise',
       subtitle: 'Craftsmanship in every digital aspect',
       webdesign: {
         title: 'Web Design',
-        description: 'Bespoke websites that perfectly translate your brand into a digital experience that impresses.',
+        description: 'Bespoke websites that perfectly translate your brand into a digital experience.',
         features: ['Unique custom design', 'Responsive for all devices', 'Conversion-optimized'],
       },
       webshop: {
         title: 'E-commerce',
-        description: 'Luxury webshops with seamless checkout experience and advanced inventory management.',
+        description: 'Luxury webshops with seamless checkout and advanced inventory management.',
         features: ['Secure payment integration', 'Inventory management', 'Customer portal'],
       },
       seo: {
         title: 'SEO & Marketing',
-        description: 'Strategic optimization for maximum online visibility and reach.',
+        description: 'Strategic optimization for maximum online visibility.',
         features: ['Technical SEO', 'Content strategy', 'Analytics & Reporting'],
       },
       maintenance: {
@@ -239,30 +225,28 @@ export const translations = {
       },
       cta: 'Learn More',
     },
-    // Why Choose Us / About
     about: {
       title: 'Why Us?',
-      subtitle: 'More than an agency - your digital partner',
+      subtitle: 'Your digital partner',
       experience: {
-        title: 'Years of Expertise',
-        description: 'With over 150 successful projects, we know exactly what works.',
+        title: 'Expertise',
+        description: 'With over 150 successful projects, we know what works.',
       },
       custom: {
-        title: 'Exclusive Custom Work',
-        description: 'No templates. Every project is a unique custom masterpiece.',
+        title: 'Custom Work',
+        description: 'No templates. Every project is a unique masterpiece.',
       },
       support: {
-        title: 'Personal Approach',
-        description: 'Direct contact with your dedicated project manager.',
+        title: 'Personal',
+        description: 'Direct contact with your project manager.',
       },
       results: {
-        title: 'Measurable Results',
-        description: 'Websites that not only impress, but also convert.',
+        title: 'Results',
+        description: 'Websites that impress and convert.',
       },
       story: 'Our Story',
-      storyText: 'For over five years we have been helping ambitious businesses transform their digital presence. We believe every website can be a masterpiece - a perfect balance between aesthetics and functionality.',
+      storyText: 'For over five years we have been helping ambitious businesses transform their digital presence.',
     },
-    // Portfolio
     portfolio: {
       title: 'Our Portfolio',
       subtitle: 'Discover our most recent masterpieces',
@@ -278,13 +262,11 @@ export const translations = {
       nextProject: 'Next Project',
       prevProject: 'Previous Project',
     },
-    // Testimonials
     testimonials: {
       title: 'What Clients Say',
       subtitle: 'Experiences from satisfied clients',
       readMore: 'Read More Reviews',
     },
-    // Quote Form
     quote: {
       title: 'Start Your Project',
       subtitle: 'Share your vision and receive a personal quote within 24 hours',
@@ -311,26 +293,25 @@ export const translations = {
         },
         budget: 'Budget Range',
         budgets: {
-          starter: '€2,500 - €5,000',
-          medium: '€5,000 - €10,000',
-          premium: '€10,000 - €25,000',
-          enterprise: '€25,000+',
+          starter: '€50 - €250',
+          medium: '€250 - €500',
+          premium: '€500 - €1,000',
+          enterprise: '€1,000+',
           unknown: 'Prefer to discuss',
         },
         deadline: 'Desired Deadline',
         description: 'Project Description',
         descriptionPlaceholder: 'Describe your vision, goals and any inspiration...',
-        files: 'Upload Documents',
-        filesDescription: 'Upload your logo, brand guidelines or inspiration material',
+        files: 'Upload Documents (if needed)',
+        filesDescription: 'Upload your logo, brand guidelines or inspiration material - optional',
         submit: 'Submit Request',
         submitting: 'Submitting...',
         success: 'Thank you for your request! We will personally contact you within 24 hours.',
       },
     },
-    // Contact
     contact: {
       title: 'Contact',
-      subtitle: "Let's connect",
+      subtitle: 'Get in touch',
       phone: 'Phone',
       email: 'Email',
       whatsapp: 'WhatsApp',
@@ -340,9 +321,8 @@ export const translations = {
       emailUs: 'Send Email',
       schedule: 'Schedule Call',
     },
-    // Footer
     footer: {
-      description: 'Premium web design for ambitious brands that want to stand out.',
+      description: 'Premium web design for ambitious brands.',
       quickLinks: 'Navigation',
       services: 'Services',
       contact: 'Contact',
@@ -350,34 +330,32 @@ export const translations = {
       privacy: 'Privacy Policy',
       terms: 'Terms & Conditions',
     },
-    // Common
     common: {
       learnMore: 'Learn More',
       getStarted: 'Get Started',
       viewAll: 'View All',
       back: 'Back',
     },
-    // Pages
     pages: {
       services: {
         hero: 'Our Services',
-        heroSubtitle: 'From concept to launch - we deliver excellence at every level',
+        heroSubtitle: 'From concept to launch - we deliver excellence',
       },
       portfolio: {
         hero: 'Our Portfolio',
-        heroSubtitle: 'Discover how we transform brands into digital masterpieces',
+        heroSubtitle: 'Discover how we transform brands',
       },
       about: {
         hero: 'About WebStudio',
-        heroSubtitle: 'The passion and expertise behind your digital success',
+        heroSubtitle: 'The passion behind your digital success',
       },
       testimonials: {
-        hero: 'Client Experiences',
-        heroSubtitle: 'Discover why businesses choose us',
+        hero: 'What Clients Say',
+        heroSubtitle: 'Experiences from satisfied clients',
       },
       quote: {
         hero: 'Start Your Project',
-        heroSubtitle: 'Share your vision and let us create something special together',
+        heroSubtitle: 'Share your vision and let us create something special',
       },
       contact: {
         hero: 'Contact',

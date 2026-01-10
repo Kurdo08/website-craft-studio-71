@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/hooks/useScrollAnimation';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -10,32 +12,48 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-gradient-luxury">
-        <div className="absolute inset-0 opacity-30 bg-noise mix-blend-overlay" />
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[100px]" />
       </div>
 
       <div className="container mx-auto container-padding relative">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <motion.div 
+          className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
+            <motion.div 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8"
+              variants={fadeInUp}
+            >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">{t.hero.badge}</span>
-            </div>
+            </motion.div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <motion.h1 
+              className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-8"
+              variants={fadeInUp}
+            >
               {t.hero.title}{' '}
               <span className="text-gradient-gold">{t.hero.titleHighlight}</span>
-            </h1>
+            </motion.h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <motion.p 
+              className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0"
+              variants={fadeInUp}
+            >
               {t.hero.subtitle}
-            </p>
+            </motion.p>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 justify-center lg:justify-start mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <motion.div 
+              className="flex flex-wrap gap-8 justify-center lg:justify-start mb-10"
+              variants={fadeInUp}
+            >
               {[
                 { value: '150+', label: 'Projecten' },
                 { value: '98%', label: 'Tevreden' },
@@ -46,10 +64,13 @@ const HeroSection = () => {
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              variants={fadeInUp}
+            >
               <Button size="lg" asChild className="bg-gradient-gold hover:opacity-90 text-white shadow-lg group h-14 px-8 text-base">
                 <Link to="/quote">
                   {t.hero.cta}
@@ -59,14 +80,17 @@ const HeroSection = () => {
               <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base border-primary/30 hover:bg-primary/5">
                 <Link to="/portfolio">{t.hero.ctaSecondary}</Link>
               </Button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Visual */}
-          <div className="relative hidden lg:block animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <motion.div 
+            className="relative hidden lg:block"
+            variants={fadeInUp}
+          >
             <div className="relative">
               {/* Main Visual Card */}
-              <div className="relative bg-card/50 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-primary/10 glow-gold">
+              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-primary/10 glow-gold">
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-3 h-3 rounded-full bg-destructive/80" />
                   <div className="w-3 h-3 rounded-full bg-warning/80" />
@@ -74,9 +98,9 @@ const HeroSection = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="h-10 bg-gradient-gold rounded-lg w-3/4 opacity-20" />
-                  <div className="h-4 bg-muted/50 rounded w-full" />
-                  <div className="h-4 bg-muted/50 rounded w-5/6" />
-                  <div className="h-4 bg-muted/50 rounded w-4/6" />
+                  <div className="h-4 bg-muted rounded w-full" />
+                  <div className="h-4 bg-muted rounded w-5/6" />
+                  <div className="h-4 bg-muted rounded w-4/6" />
                   <div className="grid grid-cols-3 gap-4 mt-8">
                     <div className="aspect-square bg-primary/10 rounded-xl border border-primary/20" />
                     <div className="aspect-square bg-primary/15 rounded-xl border border-primary/20" />
@@ -114,8 +138,8 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
