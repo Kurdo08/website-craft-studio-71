@@ -19,8 +19,8 @@ const Header = () => {
     { href: '/services', label: t.nav.services },
     { href: '/portfolio', label: t.nav.portfolio },
     { href: '/about', label: t.nav.about },
-    { href: '/testimonials', label: t.nav.testimonials },
     { href: '/contact', label: t.nav.contact },
+    { href: '/quote', label: t.nav.quote },
   ];
 
   const isActive = (path: string) => location.pathname === path;
