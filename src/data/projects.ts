@@ -1,0 +1,250 @@
+export interface Project {
+  id: string;
+  title: string;
+  category: {
+    nl: string;
+    en: string;
+  };
+  image: string;
+  tags: string[];
+  description: {
+    nl: string;
+    en: string;
+  };
+  challenge: {
+    nl: string;
+    en: string;
+  };
+  solution: {
+    nl: string;
+    en: string;
+  };
+  results: {
+    nl: string;
+    en: string;
+  };
+  technologies: string[];
+  websiteUrl?: string;
+  gallery: string[];
+}
+
+export const projects: Project[] = [
+  {
+    id: 'techflow-solutions',
+    title: 'TechFlow Solutions',
+    category: {
+      nl: 'Zakelijke Website',
+      en: 'Business Website',
+    },
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    tags: ['Webdesign', 'SEO', 'Responsive'],
+    description: {
+      nl: 'Een premium zakelijke website voor een innovatief tech consultancy bedrijf.',
+      en: 'A premium business website for an innovative tech consultancy company.',
+    },
+    challenge: {
+      nl: 'TechFlow had een verouderde website die niet paste bij hun innovatieve imago. Ze hadden een moderne, professionele online aanwezigheid nodig die hun expertise uitstraalt en leads genereert.',
+      en: 'TechFlow had an outdated website that did not match their innovative image. They needed a modern, professional online presence that radiates their expertise and generates leads.',
+    },
+    solution: {
+      nl: 'Wij ontwierpen een strakke, moderne website met focus op conversie. Een heldere structuur, overtuigende content en strategisch geplaatste call-to-actions zorgen voor maximale impact.',
+      en: 'We designed a sleek, modern website with a focus on conversion. A clear structure, compelling content and strategically placed call-to-actions ensure maximum impact.',
+    },
+    results: {
+      nl: 'Na lancering zag TechFlow een stijging van 200% in online leads en een significante verbetering in merkperceptie. De gemiddelde sessieduur verdubbelde.',
+      en: 'After launch, TechFlow saw a 200% increase in online leads and a significant improvement in brand perception. The average session duration doubled.',
+    },
+    technologies: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80',
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80',
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'modastyle-boutique',
+    title: 'ModaStyle Boutique',
+    category: {
+      nl: 'Webshop',
+      en: 'E-commerce',
+    },
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+    tags: ['E-commerce', 'Betalingen', 'Mobiel'],
+    description: {
+      nl: 'Een luxe online boutique voor exclusieve mode en accessoires.',
+      en: 'A luxury online boutique for exclusive fashion and accessories.',
+    },
+    challenge: {
+      nl: 'ModaStyle wilde hun fysieke winkelervaring vertalen naar online. De uitdaging was om de luxe sfeer en persoonlijke service te behouden in een digitale omgeving.',
+      en: 'ModaStyle wanted to translate their physical store experience online. The challenge was to maintain the luxurious atmosphere and personal service in a digital environment.',
+    },
+    solution: {
+      nl: 'Een elegant e-commerce platform met focus op visuele presentatie. Uitgebreide productfotografie, zoom functionaliteit en een naadloze checkout ervaring zorgen voor een premium shopping ervaring.',
+      en: 'An elegant e-commerce platform with a focus on visual presentation. Extensive product photography, zoom functionality and a seamless checkout experience ensure a premium shopping experience.',
+    },
+    results: {
+      nl: 'De online verkoop overtrof de fysieke winkel binnen 6 maanden. De gemiddelde orderwaarde steeg met 35% en het retourpercentage daalde significant.',
+      en: 'Online sales exceeded the physical store within 6 months. The average order value increased by 35% and the return rate decreased significantly.',
+    },
+    technologies: ['Shopify', 'React', 'Stripe', 'Klaviyo', 'Custom Theme'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80',
+      'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&q=80',
+      'https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'greenleaf-catering',
+    title: 'GreenLeaf Catering',
+    category: {
+      nl: 'Zakelijke Website',
+      en: 'Business Website',
+    },
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    tags: ['Webdesign', 'Reserveringen', 'Menu'],
+    description: {
+      nl: 'Een smaakvolle website voor een premium catering service.',
+      en: 'A tasteful website for a premium catering service.',
+    },
+    challenge: {
+      nl: 'GreenLeaf had geen online aanwezigheid en miste daardoor veel potentiële klanten. Ze wilden een website die hun culinaire expertise en duurzame filosofie uitstraalt.',
+      en: 'GreenLeaf had no online presence and was missing many potential customers. They wanted a website that radiates their culinary expertise and sustainable philosophy.',
+    },
+    solution: {
+      nl: 'Een visueel rijke website met prachtige food photography en een intuïtief reserveringssysteem. De website vertelt het verhaal van GreenLeaf en maakt het eenvoudig om een offerte aan te vragen.',
+      en: 'A visually rich website with beautiful food photography and an intuitive reservation system. The website tells the story of GreenLeaf and makes it easy to request a quote.',
+    },
+    results: {
+      nl: 'Binnen 3 maanden was de agenda volledig gevuld. De website genereert gemiddeld 50 offerteaanvragen per maand.',
+      en: 'Within 3 months the calendar was fully booked. The website generates an average of 50 quote requests per month.',
+    },
+    technologies: ['WordPress', 'Custom Theme', 'WPBakery', 'WooCommerce', 'Calendly'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80',
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80',
+      'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'fitpro-gym',
+    title: 'FitPro Gym',
+    category: {
+      nl: 'Landing Page',
+      en: 'Landing Page',
+    },
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
+    tags: ['Landing', 'Leads', 'Conversie'],
+    description: {
+      nl: 'Een krachtige landing page voor een premium fitness studio.',
+      en: 'A powerful landing page for a premium fitness studio.',
+    },
+    challenge: {
+      nl: 'FitPro opende een nieuwe locatie en had een effectieve manier nodig om snel leads te genereren en nieuwe leden te werven.',
+      en: 'FitPro was opening a new location and needed an effective way to quickly generate leads and recruit new members.',
+    },
+    solution: {
+      nl: 'Een overtuigende landing page met sterke visual, social proof en een onweerstaanbaar introductieaanbod. A/B testing optimaliseerde de conversie continu.',
+      en: 'A compelling landing page with strong visuals, social proof and an irresistible introductory offer. A/B testing continuously optimized conversion.',
+    },
+    results: {
+      nl: 'De landing page behaalde een conversieratio van 12%. Binnen de eerste maand werden 200 nieuwe leden geworven.',
+      en: 'The landing page achieved a conversion rate of 12%. Within the first month, 200 new members were recruited.',
+    },
+    technologies: ['React', 'Tailwind CSS', 'Netlify', 'Mailchimp', 'Google Analytics'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80',
+      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80',
+      'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'luxe-vastgoed',
+    title: 'Luxe Vastgoed Amsterdam',
+    category: {
+      nl: 'Zakelijke Website',
+      en: 'Business Website',
+    },
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    tags: ['Real Estate', 'Premium', 'Custom CMS'],
+    description: {
+      nl: 'Een exclusieve website voor een high-end vastgoedmakelaar in Amsterdam.',
+      en: 'An exclusive website for a high-end real estate agent in Amsterdam.',
+    },
+    challenge: {
+      nl: 'Luxe Vastgoed wilde een website die past bij hun exclusieve portfolio en vermogende klantenkring. De bestaande website was generiek en maakte geen indruk.',
+      en: 'Luxe Vastgoed wanted a website that matches their exclusive portfolio and wealthy clientele. The existing website was generic and did not impress.',
+    },
+    solution: {
+      nl: 'Een op maat gebouwd platform met uitgebreide zoekfunctionaliteit, virtuele tours en een exclusieve members-only sectie voor premium objecten.',
+      en: 'A custom-built platform with extensive search functionality, virtual tours and an exclusive members-only section for premium properties.',
+    },
+    results: {
+      nl: 'De website droeg bij aan de verkoop van 15 premium objecten in het eerste kwartaal. De gemiddelde verkoopprijs steeg met 8%.',
+      en: 'The website contributed to the sale of 15 premium properties in the first quarter. The average selling price increased by 8%.',
+    },
+    technologies: ['Next.js', 'Sanity CMS', 'Mapbox', 'Three.js', 'Vercel'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'artisan-coffee',
+    title: 'Artisan Coffee Roasters',
+    category: {
+      nl: 'Webshop',
+      en: 'E-commerce',
+    },
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80',
+    tags: ['E-commerce', 'Subscription', 'Branding'],
+    description: {
+      nl: 'Een premium webshop voor ambachtelijke koffie met een subscription model.',
+      en: 'A premium webshop for artisan coffee with a subscription model.',
+    },
+    challenge: {
+      nl: 'Artisan Coffee wilde hun lokale succes uitbreiden naar heel Nederland met een online shop die hun ambachtelijke aanpak uitstraalt.',
+      en: 'Artisan Coffee wanted to expand their local success throughout the Netherlands with an online shop that radiates their artisan approach.',
+    },
+    solution: {
+      nl: 'Een stijlvolle webshop met een flexibel subscription systeem, uitgebreide productinformatie en een blog over koffiecultuur.',
+      en: 'A stylish webshop with a flexible subscription system, extensive product information and a blog about coffee culture.',
+    },
+    results: {
+      nl: 'Het subscription model groeide naar 500 actieve abonnees binnen 6 maanden. De customer lifetime value verdrievoudigde.',
+      en: 'The subscription model grew to 500 active subscribers within 6 months. Customer lifetime value tripled.',
+    },
+    technologies: ['Shopify Plus', 'ReCharge', 'Klaviyo', 'Custom Liquid', 'Figma'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80',
+      'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=80',
+      'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200&q=80',
+    ],
+  },
+];
+
+export const getProjectById = (id: string): Project | undefined => {
+  return projects.find((project) => project.id === id);
+};
+
+export const getNextProject = (currentId: string): Project | undefined => {
+  const currentIndex = projects.findIndex((p) => p.id === currentId);
+  if (currentIndex === -1 || currentIndex === projects.length - 1) {
+    return projects[0];
+  }
+  return projects[currentIndex + 1];
+};
+
+export const getPrevProject = (currentId: string): Project | undefined => {
+  const currentIndex = projects.findIndex((p) => p.id === currentId);
+  if (currentIndex === -1 || currentIndex === 0) {
+    return projects[projects.length - 1];
+  }
+  return projects[currentIndex - 1];
+};

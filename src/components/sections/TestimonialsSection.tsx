@@ -1,5 +1,7 @@
-import { Star, Quote } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Star, Quote, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const TestimonialsSection = () => {
@@ -33,11 +35,18 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-muted/30">
-      <div className="container mx-auto container-padding">
+    <section className="section-padding bg-gradient-luxury relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-20 bg-noise mix-blend-overlay" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2" />
+      
+      <div className="container mx-auto container-padding relative">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
+            Testimonials
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t.testimonials.title}
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -46,37 +55,39 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="bg-card hover:shadow-lg transition-shadow duration-300 border-border/50"
+              className="bg-card/50 backdrop-blur-sm hover:bg-card transition-all duration-500 border-border/50 hover:border-primary/30 hover:shadow-2xl group"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 {/* Quote Icon */}
-                <Quote className="w-10 h-10 text-primary/20 mb-4" />
-
-                {/* Text */}
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  "{testimonial.text}"
-                </p>
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <Quote className="w-6 h-6 text-primary" />
+                </div>
 
                 {/* Rating */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                   ))}
                 </div>
+
+                {/* Text */}
+                <p className="text-foreground leading-relaxed mb-8 text-lg">
+                  "{testimonial.text}"
+                </p>
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                   />
                   <div>
-                    <p className="font-heading font-semibold text-foreground">
+                    <p className="font-display font-semibold text-foreground">
                       {testimonial.name}
                     </p>
                     <p className="text-sm text-muted-foreground">
@@ -87,6 +98,16 @@ const TestimonialsSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="text-center mt-16">
+          <Button asChild size="lg" variant="outline" className="h-14 px-8 border-primary/30 hover:bg-primary/5">
+            <Link to="/testimonials">
+              {t.testimonials.readMore}
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -2,45 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system - Zakelijk & Corporate Theme */
+/* Luxe & Premium Design System */
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 30% 15%;
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 220 30% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 220 30% 10%;
 
-    --primary: 220 70% 45%;
+    --primary: 40 70% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 25% 93%;
-    --secondary-foreground: 220 30% 20%;
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 30% 15%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 220 15% 50%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 200 80% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 40 90% 55%;
+    --accent-foreground: 220 30% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 220 70% 45%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 40 70% 45%;
 
     --radius: 0.5rem;
 
-    /* Corporate accent colors */
-    --success: 150 60% 40%;
+    /* Luxury accent colors */
+    --gold: 40 70% 50%;
+    --gold-light: 40 80% 70%;
+    --gold-dark: 35 80% 35%;
+    --champagne: 35 30% 85%;
+    --ivory: 45 30% 96%;
+
+    --success: 150 50% 40%;
     --success-foreground: 0 0% 100%;
     --warning: 40 90% 50%;
-    --warning-foreground: 220 30% 15%;
+    --warning-foreground: 220 30% 10%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -49,51 +55,58 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 40 70% 50%;
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
+    --background: 220 25% 6%;
+    --foreground: 40 20% 95%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 220 25% 10%;
+    --card-foreground: 40 20% 95%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 40 20% 95%;
 
-    --primary: 215 80% 55%;
-    --primary-foreground: 220 30% 8%;
+    --primary: 40 70% 50%;
+    --primary-foreground: 220 25% 6%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 40 20% 90%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 215 20% 60%;
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 15% 55%;
 
-    --accent: 200 80% 55%;
-    --accent-foreground: 220 30% 8%;
+    --accent: 40 80% 55%;
+    --accent-foreground: 220 25% 6%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive-foreground: 40 20% 95%;
 
-    --border: 220 25% 22%;
-    --input: 220 25% 22%;
-    --ring: 215 80% 55%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 40 70% 50%;
 
-    --success: 150 60% 45%;
-    --success-foreground: 220 30% 8%;
+    /* Luxury accent colors - dark mode */
+    --gold: 40 70% 55%;
+    --gold-light: 40 60% 70%;
+    --gold-dark: 35 80% 40%;
+    --champagne: 35 20% 25%;
+    --ivory: 45 15% 15%;
+
+    --success: 150 50% 45%;
+    --success-foreground: 220 25% 6%;
     --warning: 40 90% 55%;
-    --warning-foreground: 220 30% 8%;
+    --warning-foreground: 220 25% 6%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 40 70% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 20% 14%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 40 70% 50%;
   }
 }
 
@@ -113,14 +126,64 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-luxury {
+    background: linear-gradient(135deg, hsl(220 25% 6%) 0%, hsl(220 25% 12%) 50%, hsl(220 25% 6%) 100%);
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold) / 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px hsl(var(--gold) / 0.15), 0 0 80px hsl(var(--gold) / 0.1);
   }
 
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-20 md:py-28 lg:py-36;
   }
 
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .luxury-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-xl;
+  }
+
+  .luxury-border {
+    @apply border border-primary/20 hover:border-primary/40 transition-colors;
+  }
+
+  .shine-effect {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--gold) / 0.1),
+      transparent
+    );
+    animation: shine 3s infinite;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }

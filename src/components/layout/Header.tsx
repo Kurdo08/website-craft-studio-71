@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -7,66 +8,82 @@ import { cn } from '@/lib/utils';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
 
   const toggleLanguage = () => {
     setLanguage(language === 'nl' ? 'en' : 'nl');
   };
 
   const navLinks = [
-    { href: '#home', label: t.nav.home },
-    { href: '#services', label: t.nav.services },
-    { href: '#portfolio', label: t.nav.portfolio },
-    { href: '#quote', label: t.nav.quote },
-    { href: '#contact', label: t.nav.contact },
+    { href: '/', label: t.nav.home },
+    { href: '/services', label: t.nav.services },
+    { href: '/portfolio', label: t.nav.portfolio },
+    { href: '/about', label: t.nav.about },
+    { href: '/testimonials', label: t.nav.testimonials },
+    { href: '/contact', label: t.nav.contact },
   ];
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto container-padding">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">W</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-white font-display font-bold text-2xl">W</span>
             </div>
-            <span className="font-heading font-bold text-xl text-foreground">WebStudio</span>
-          </a>
+            <div className="hidden sm:block">
+              <span className="font-display font-bold text-xl text-foreground">WebStudio</span>
+              <span className="block text-xs text-primary font-medium tracking-wider uppercase">Premium Design</span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                to={link.href}
+                className={cn(
+                  'relative text-sm font-medium transition-colors py-2',
+                  isActive(link.href)
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
               >
                 {link.label}
-              </a>
+                {isActive(link.href) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                )}
+              </Link>
             ))}
           </nav>
 
           {/* Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleLanguage}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
             >
               <Globe className="w-4 h-4" />
-              {language.toUpperCase()}
+              <span className="font-medium">{language.toUpperCase()}</span>
             </Button>
-            <Button asChild>
-              <a href="#quote">{t.hero.cta}</a>
+            <Button asChild className="bg-gradient-gold hover:opacity-90 text-white shadow-lg">
+              <Link to="/quote">{t.hero.cta}</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center space-x-2">
+          <div className="flex lg:hidden items-center space-x-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleLanguage}
+              className="text-muted-foreground"
             >
               <Globe className="w-5 h-5" />
             </Button>
@@ -74,6 +91,7 @@ const Header = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-foreground"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -83,26 +101,33 @@ const Header = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            'md:hidden overflow-hidden transition-all duration-300',
-            isMenuOpen ? 'max-h-80 pb-4' : 'max-h-0'
+            'lg:hidden overflow-hidden transition-all duration-300',
+            isMenuOpen ? 'max-h-[500px] pb-6' : 'max-h-0'
           )}
         >
-          <nav className="flex flex-col space-y-4">
+          <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                to={link.href}
+                className={cn(
+                  'px-4 py-3 rounded-lg font-medium transition-colors',
+                  isActive(link.href)
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                )}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <Button asChild className="w-full">
-              <a href="#quote" onClick={() => setIsMenuOpen(false)}>
-                {t.hero.cta}
-              </a>
-            </Button>
+            <div className="pt-4 px-4">
+              <Button asChild className="w-full bg-gradient-gold hover:opacity-90 text-white">
+                <Link to="/quote" onClick={() => setIsMenuOpen(false)}>
+                  {t.hero.cta}
+                </Link>
+              </Button>
+            </div>
           </nav>
         </div>
       </div>
