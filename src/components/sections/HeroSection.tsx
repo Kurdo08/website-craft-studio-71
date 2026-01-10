@@ -1,99 +1,127 @@
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
-  const highlights = [
-    'Gratis offerte binnen 24 uur',
-    '100% maatwerk design',
-    'Persoonlijke begeleiding',
-  ];
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-luxury">
+        <div className="absolute inset-0 opacity-30 bg-noise mix-blend-overlay" />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
       </div>
 
-      <div className="container mx-auto container-padding">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto container-padding relative">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">{t.hero.badge}</span>
+            </div>
+
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               {t.hero.title}{' '}
-              <span className="text-gradient">{t.hero.titleHighlight}</span>
+              <span className="text-gradient-gold">{t.hero.titleHighlight}</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {t.hero.subtitle}
             </p>
 
-            {/* Highlights */}
-            <ul className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              {highlights.map((item, index) => (
-                <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
+            {/* Stats */}
+            <div className="flex flex-wrap gap-8 justify-center lg:justify-start mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              {[
+                { value: '150+', label: 'Projecten' },
+                { value: '98%', label: 'Tevreden' },
+                { value: '5+', label: 'Jaar' },
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
               ))}
-            </ul>
+            </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" asChild className="group">
-                <a href="#quote">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <Button size="lg" asChild className="bg-gradient-gold hover:opacity-90 text-white shadow-lg group h-14 px-8 text-base">
+                <Link to="/quote">
                   {t.hero.cta}
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="#portfolio">{t.hero.ctaSecondary}</a>
+              <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base border-primary/30 hover:bg-primary/5">
+                <Link to="/portfolio">{t.hero.ctaSecondary}</Link>
               </Button>
             </div>
           </div>
 
           {/* Visual */}
-          <div className="relative hidden lg:block">
+          <div className="relative hidden lg:block animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
-              {/* Main Card */}
-              <div className="bg-card rounded-2xl shadow-2xl p-6 border border-border">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-destructive" />
-                  <div className="w-3 h-3 rounded-full bg-warning" />
-                  <div className="w-3 h-3 rounded-full bg-success" />
+              {/* Main Visual Card */}
+              <div className="relative bg-card/50 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-primary/10 glow-gold">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full bg-destructive/80" />
+                  <div className="w-3 h-3 rounded-full bg-warning/80" />
+                  <div className="w-3 h-3 rounded-full bg-success/80" />
                 </div>
-                <div className="space-y-3">
-                  <div className="h-8 bg-primary/10 rounded-lg w-3/4" />
-                  <div className="h-4 bg-muted rounded w-full" />
-                  <div className="h-4 bg-muted rounded w-5/6" />
-                  <div className="h-4 bg-muted rounded w-4/6" />
-                  <div className="grid grid-cols-3 gap-3 mt-6">
-                    <div className="h-24 bg-primary/20 rounded-lg" />
-                    <div className="h-24 bg-accent/20 rounded-lg" />
-                    <div className="h-24 bg-success/20 rounded-lg" />
+                <div className="space-y-4">
+                  <div className="h-10 bg-gradient-gold rounded-lg w-3/4 opacity-20" />
+                  <div className="h-4 bg-muted/50 rounded w-full" />
+                  <div className="h-4 bg-muted/50 rounded w-5/6" />
+                  <div className="h-4 bg-muted/50 rounded w-4/6" />
+                  <div className="grid grid-cols-3 gap-4 mt-8">
+                    <div className="aspect-square bg-primary/10 rounded-xl border border-primary/20" />
+                    <div className="aspect-square bg-primary/15 rounded-xl border border-primary/20" />
+                    <div className="aspect-square bg-primary/20 rounded-xl border border-primary/20" />
                   </div>
+                </div>
+
+                {/* Decorative overlay */}
+                <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+                  <div className="shine-effect absolute inset-0" />
                 </div>
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 bg-success text-success-foreground rounded-xl px-4 py-2 shadow-lg animate-fade-in">
-                <span className="text-sm font-medium">+150% conversie</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-card rounded-xl px-4 py-3 shadow-lg border border-border animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-primary" />
+              <div className="absolute -top-4 -right-4 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-sm font-medium">SEO Geoptimaliseerd</span>
+                  <div>
+                    <span className="text-sm font-bold text-foreground block">+200%</span>
+                    <span className="text-xs text-muted-foreground">Conversie</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float" style={{ animationDelay: '1s' }}>
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-gold border-2 border-card" />
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-foreground">150+ Tevreden klanten</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+        <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex justify-center pt-2">
+          <div className="w-1 h-3 bg-primary rounded-full" />
         </div>
       </div>
     </section>
