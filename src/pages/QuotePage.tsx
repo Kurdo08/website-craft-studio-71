@@ -72,7 +72,7 @@ const QuotePage = () => {
           <div className="container mx-auto container-padding">
             <Card className="max-w-2xl mx-auto bg-card border-primary/20">
               <CardContent className="p-12 text-center">
-                <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-navy rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">
@@ -261,7 +261,7 @@ const QuotePage = () => {
 
                   {/* Submit */}
                   <motion.div variants={fadeInUp}>
-                    <Button type="submit" size="lg" className="w-full bg-gradient-gold hover:opacity-90 text-white shadow-lg h-12" disabled={isSubmitting}>
+                    <Button type="submit" size="lg" className="w-full bg-gradient-navy hover:opacity-90 text-white shadow-lg h-12" disabled={isSubmitting}>
                       {isSubmitting ? (
                         t.quote.form.submitting
                       ) : (

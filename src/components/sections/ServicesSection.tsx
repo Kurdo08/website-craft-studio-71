@@ -42,7 +42,7 @@ const ServicesSection = () => {
             <motion.div key={index} variants={fadeInUp}>
               <Card className="group bg-card hover:bg-card transition-all duration-500 hover:shadow-xl border-border/50 hover:border-primary/30 h-full">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-navy rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-display font-semibold text-lg text-foreground mb-2">
@@ -59,7 +59,7 @@ const ServicesSection = () => {
 
         {/* CTA */}
         <motion.div className="text-center mt-10" variants={fadeInUp}>
-          <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-white shadow-lg h-12 px-6">
+          <Button asChild size="lg" className="bg-gradient-navy hover:opacity-90 text-white shadow-lg h-12 px-6">
             <Link to="/services">
               {t.common.learnMore}
               <ArrowRight className="ml-2 w-4 h-4" />

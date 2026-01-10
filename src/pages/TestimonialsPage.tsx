@@ -7,7 +7,7 @@ const TestimonialsPage = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-background dark">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24">
         <section className="section-padding bg-gradient-luxury relative">

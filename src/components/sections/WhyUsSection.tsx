@@ -47,7 +47,7 @@ const WhyUsSection = () => {
               ))}
             </div>
 
-            <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-white shadow-lg h-12 px-6">
+            <Button asChild size="lg" className="bg-gradient-navy hover:opacity-90 text-white shadow-lg h-12 px-6">
               <Link to="/about">
                 {t.common.learnMore}
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -57,7 +57,7 @@ const WhyUsSection = () => {
 
           {/* Stats Card */}
           <motion.div className="relative" variants={slideInRight}>
-            <div className="bg-card rounded-2xl p-8 border border-primary/10 shadow-xl glow-gold">
+            <div className="bg-card rounded-2xl p-8 border border-primary/10 shadow-xl glow-navy">
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { value: '150+', label: 'Projecten' },
@@ -66,7 +66,7 @@ const WhyUsSection = () => {
                   { value: '24u', label: 'Response' },
                 ].map((stat, index) => (
                   <div key={index} className="text-center p-4">
-                    <div className="text-3xl md:text-4xl font-display font-bold text-gradient-gold mb-1">
+                    <div className="text-3xl md:text-4xl font-display font-bold text-gradient-navy mb-1">
                       {stat.value}
                     </div>
                     <div className="text-muted-foreground text-sm">{stat.label}</div>

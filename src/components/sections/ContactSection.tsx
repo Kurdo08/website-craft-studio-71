@@ -61,7 +61,7 @@ const ContactSection = () => {
             <motion.div key={index} variants={fadeInUp}>
               <Card className="bg-card hover:bg-card transition-all duration-500 border-border/50 hover:border-primary/30 hover:shadow-xl group h-full">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-navy rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
                     <method.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-display font-semibold text-foreground mb-1">
@@ -103,7 +103,7 @@ const ContactSection = () => {
 
         {/* CTA */}
         <motion.div className="text-center mt-10" variants={fadeInUp}>
-          <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-white shadow-lg h-12 px-6">
+          <Button asChild size="lg" className="bg-gradient-navy hover:opacity-90 text-white shadow-lg h-12 px-6">
             <Link to="/quote">
               {t.hero.cta}
               <ArrowRight className="ml-2 w-4 h-4" />
