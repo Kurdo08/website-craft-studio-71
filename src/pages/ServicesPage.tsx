@@ -64,7 +64,7 @@ const ServicesPage = () => {
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="bg-card border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl h-full">
                     <CardContent className="p-8">
-                      <div className="w-14 h-14 bg-gradient-gold rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                      <div className="w-14 h-14 bg-gradient-navy rounded-xl flex items-center justify-center mb-6 shadow-lg">
                         <service.icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="font-display text-xl font-bold text-foreground mb-3">{service.title}</h3>
@@ -113,7 +113,7 @@ const ServicesPage = () => {
             </motion.div>
 
             <motion.div className="text-center mt-12" variants={fadeInUp}>
-              <Button asChild size="lg" className="bg-gradient-gold text-white h-12 px-6">
+              <Button asChild size="lg" className="bg-gradient-navy text-white h-12 px-6">
                 <Link to="/quote">{t.hero.cta}<ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
             </motion.div>

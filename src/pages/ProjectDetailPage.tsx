@@ -15,11 +15,11 @@ const ProjectDetailPage = () => {
   const prevProject = getPrevProject(id || '');
 
   if (!project) {
-    return <div className="min-h-screen bg-background dark flex items-center justify-center"><p>Project niet gevonden</p></div>;
+    return <div className="min-h-screen bg-background flex items-center justify-center"><p>Project niet gevonden</p></div>;
   }
 
   return (
-    <div className="min-h-screen bg-background dark">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24">
         <section className="section-padding bg-gradient-luxury relative">
@@ -63,7 +63,7 @@ const ProjectDetailPage = () => {
                   </div>
                 </div>
                 {project.websiteUrl && (
-                  <Button asChild className="w-full bg-gradient-gold text-white">
+                  <Button asChild className="w-full bg-gradient-navy text-white">
                     <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
                       {t.portfolio.visitWebsite}<ExternalLink className="ml-2 w-4 h-4" />
                     </a>

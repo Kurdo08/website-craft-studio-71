@@ -39,7 +39,7 @@ const HeroSection = () => {
               variants={fadeInUp}
             >
               {t.hero.title}{' '}
-              <span className="text-gradient-gold">{t.hero.titleHighlight}</span>
+              <span className="text-gradient-navy">{t.hero.titleHighlight}</span>
             </motion.h1>
             
             <motion.p 
@@ -71,7 +71,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               variants={fadeInUp}
             >
-              <Button size="lg" asChild className="bg-gradient-gold hover:opacity-90 text-white shadow-lg group h-14 px-8 text-base">
+              <Button size="lg" asChild className="bg-gradient-navy hover:opacity-90 text-white shadow-lg group h-14 px-8 text-base">
                 <Link to="/quote">
                   {t.hero.cta}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -90,14 +90,14 @@ const HeroSection = () => {
           >
             <div className="relative">
               {/* Main Visual Card */}
-              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-primary/10 glow-gold">
+              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-primary/10 glow-navy">
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-3 h-3 rounded-full bg-destructive/80" />
                   <div className="w-3 h-3 rounded-full bg-warning/80" />
                   <div className="w-3 h-3 rounded-full bg-success/80" />
                 </div>
                 <div className="space-y-4">
-                  <div className="h-10 bg-gradient-gold rounded-lg w-3/4 opacity-20" />
+                  <div className="h-10 bg-gradient-navy rounded-lg w-3/4 opacity-20" />
                   <div className="h-4 bg-muted rounded w-full" />
                   <div className="h-4 bg-muted rounded w-5/6" />
                   <div className="h-4 bg-muted rounded w-4/6" />
@@ -117,7 +117,7 @@ const HeroSection = () => {
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-navy rounded-lg flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -131,7 +131,7 @@ const HeroSection = () => {
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-gold border-2 border-card" />
+                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-navy border-2 border-card" />
                     ))}
                   </div>
                   <span className="text-sm font-medium text-foreground">150+ Tevreden klanten</span>

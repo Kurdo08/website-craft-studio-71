@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-navy rounded-lg flex items-center justify-center">
               <span className="text-white font-display font-bold text-lg">W</span>
             </div>
             <div>

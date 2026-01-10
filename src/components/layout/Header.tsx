@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-gradient-navy rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-white font-display font-bold text-2xl">W</span>
             </div>
             <div className="hidden sm:block">
@@ -72,7 +72,7 @@ const Header = () => {
               <Globe className="w-4 h-4" />
               <span className="font-medium">{language.toUpperCase()}</span>
             </Button>
-            <Button asChild className="bg-gradient-gold hover:opacity-90 text-white shadow-lg">
+            <Button asChild className="bg-gradient-navy hover:opacity-90 text-white shadow-lg">
               <Link to="/quote">{t.hero.cta}</Link>
             </Button>
           </div>
@@ -122,7 +122,7 @@ const Header = () => {
               </Link>
             ))}
             <div className="pt-4 px-4">
-              <Button asChild className="w-full bg-gradient-gold hover:opacity-90 text-white">
+              <Button asChild className="w-full bg-gradient-navy hover:opacity-90 text-white">
                 <Link to="/quote" onClick={() => setIsMenuOpen(false)}>
                   {t.hero.cta}
                 </Link>
