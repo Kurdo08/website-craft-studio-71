@@ -16,7 +16,7 @@ const PortfolioSection = () => {
   const displayProjects = projects.slice(0, 4);
 
   return (
-    <section className="section-padding relative overflow-hidden bg-secondary/30">
+    <section className="section-padding relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
       <motion.div 

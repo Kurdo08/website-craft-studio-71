@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden bg-soft">
       <motion.div 
         ref={ref}
         className="container mx-auto container-padding"

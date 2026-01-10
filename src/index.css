@@ -40,8 +40,9 @@
     --navy: 220 65% 30%;
     --navy-light: 220 50% 50%;
     --navy-dark: 220 70% 20%;
-    --slate: 220 20% 92%;
-    --pearl: 220 20% 98%;
+    --slate: 220 15% 96%;
+    --pearl: 220 10% 99%;
+    --soft-gray: 220 15% 97%;
 
     --success: 150 50% 40%;
     --success-foreground: 0 0% 100%;
@@ -91,6 +92,14 @@
 
   .bg-gradient-navy {
     background: linear-gradient(135deg, hsl(var(--navy-dark)), hsl(var(--navy)), hsl(var(--navy-light)));
+  }
+
+  .bg-soft {
+    background-color: hsl(var(--soft-gray));
+  }
+
+  .bg-alternate {
+    background: linear-gradient(180deg, hsl(var(--soft-gray)) 0%, hsl(var(--background)) 100%);
   }
 
   .border-navy {
