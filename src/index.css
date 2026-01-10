@@ -2,60 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Luxe & Premium Design System */
+/* Luxe & Premium Design System - White Theme with Gold Accents */
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 30% 10%;
+    --background: 0 0% 100%;
+    --foreground: 220 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card-foreground: 220 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover-foreground: 220 25% 12%;
 
-    --primary: 40 70% 45%;
+    --primary: 38 70% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 40 20% 96%;
+    --secondary-foreground: 220 25% 15%;
 
-    --muted: 220 15% 94%;
+    --muted: 40 15% 95%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 40 90% 55%;
-    --accent-foreground: 220 30% 10%;
+    --accent: 38 80% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 40 70% 45%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 38 70% 45%;
 
     --radius: 0.5rem;
 
     /* Luxury accent colors */
-    --gold: 40 70% 50%;
-    --gold-light: 40 80% 70%;
+    --gold: 38 70% 50%;
+    --gold-light: 40 60% 70%;
     --gold-dark: 35 80% 35%;
-    --champagne: 35 30% 85%;
-    --ivory: 45 30% 96%;
+    --champagne: 40 30% 92%;
+    --ivory: 45 40% 98%;
 
     --success: 150 50% 40%;
     --success-foreground: 0 0% 100%;
     --warning: 40 90% 50%;
     --warning-foreground: 220 30% 10%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 40 70% 50%;
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 220 25% 12%;
+    --sidebar-primary: 38 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 20% 96%;
+    --sidebar-accent-foreground: 220 25% 12%;
+    --sidebar-border: 40 20% 90%;
+    --sidebar-ring: 38 70% 45%;
   }
 
   .dark {
@@ -130,14 +130,14 @@
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)));
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .bg-gradient-luxury {
-    background: linear-gradient(135deg, hsl(220 25% 6%) 0%, hsl(220 25% 12%) 50%, hsl(220 25% 6%) 100%);
+    background: linear-gradient(180deg, hsl(var(--champagne)) 0%, hsl(var(--background)) 100%);
   }
 
   .bg-gradient-gold {
@@ -149,11 +149,11 @@
   }
 
   .glow-gold {
-    box-shadow: 0 0 40px hsl(var(--gold) / 0.15), 0 0 80px hsl(var(--gold) / 0.1);
+    box-shadow: 0 0 40px hsl(var(--gold) / 0.1), 0 0 80px hsl(var(--gold) / 0.05);
   }
 
   .section-padding {
-    @apply py-20 md:py-28 lg:py-36;
+    @apply py-16 md:py-20 lg:py-24;
   }
 
   .container-padding {
@@ -161,7 +161,7 @@
   }
 
   .luxury-card {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-xl;
+    @apply bg-card border border-border/50 shadow-lg;
   }
 
   .luxury-border {
@@ -176,6 +176,18 @@
       transparent
     );
     animation: shine 3s infinite;
+  }
+
+  .section-header {
+    @apply text-center max-w-2xl mx-auto mb-10 md:mb-12;
+  }
+
+  .section-title {
+    @apply font-display text-2xl md:text-3xl font-bold text-foreground mb-3;
+  }
+
+  .section-subtitle {
+    @apply text-base text-muted-foreground;
   }
 }
 
