@@ -253,7 +253,7 @@ export const projects: Project[] = [
       en: 'More than 2,000 successful matches in the first year. Average review score of 4.7 stars. 85% of users recommend the platform.',
     },
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Google Maps API', 'Tailwind CSS'],
-    websiteUrl: 'https://example.com',
+    websiteUrl: 'https://rijscholenadviesbureau.nl',
     gallery: [
       'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80',
       'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&q=80',
@@ -286,7 +286,7 @@ export const projects: Project[] = [
       en: 'Revenue increase of 150% within 8 months. Encrypted phones became a bestseller with 40% of total sales.',
     },
     technologies: ['WooCommerce', 'WordPress', 'Stripe', 'Custom Plugin', 'Mailchimp'],
-    websiteUrl: 'https://example.com',
+    websiteUrl: 'https://phone-recovery.nl',
     gallery: [
       'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80',
       'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80',
@@ -319,7 +319,7 @@ export const projects: Project[] = [
       en: 'Occupancy rate of 78% in the first quarter. The Mercedes G-Wagon is the most popular choice with 35% of all bookings.',
     },
     technologies: ['React', 'Supabase', 'Stripe', 'Calendly', 'Tailwind CSS'],
-    websiteUrl: 'https://example.com',
+    websiteUrl: 'https://promotioncars.nl',
     gallery: [
       'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80',
       'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=1200&q=80',

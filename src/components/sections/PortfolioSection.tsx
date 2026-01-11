@@ -12,8 +12,9 @@ const PortfolioSection = () => {
   const { t, language } = useLanguage();
   const { ref, controls } = useScrollAnimation();
 
-  // Show only first 4 projects on homepage
-  const displayProjects = projects.slice(0, 4);
+  // Show only recent featured projects
+  const recentProjectIds = ['rijscholenadvies-bureau', 'phone-recovery', 'promotioncars', 'luxe-vastgoed'];
+  const displayProjects = projects.filter(p => recentProjectIds.includes(p.id));
 
   return (
     <section className="section-padding relative overflow-hidden">
@@ -26,13 +27,38 @@ const PortfolioSection = () => {
         initial="hidden"
         animate={controls}
       >
-        {/* Header */}
-        <motion.div className="section-header" variants={fadeInUp}>
-          <span className="text-primary text-sm font-medium tracking-wider uppercase mb-3 block">
-            Portfolio
-          </span>
-          <h2 className="section-title">{t.portfolio.title}</h2>
-          <p className="section-subtitle">{t.portfolio.subtitle}</p>
+        {/* Header with Image */}
+        <motion.div className="section-header relative" variants={fadeInUp}>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8">
+            <div className="lg:max-w-xl">
+              <span className="text-primary text-sm font-medium tracking-wider uppercase mb-3 block">
+                Portfolio
+              </span>
+              <div className="flex items-center gap-4">
+                <h2 className="section-title mb-0">{t.portfolio.title}</h2>
+                <img 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=120&q=80" 
+                  alt="Portfolio" 
+                  className="hidden md:block w-16 h-16 object-cover rounded-xl border-2 border-primary/20 shadow-lg"
+                />
+              </div>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Ontdek hoe wij merken transformeren met onze recente projecten
+              </p>
+            </div>
+            <div className="hidden lg:flex gap-3">
+              <img 
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&q=80" 
+                alt="Work" 
+                className="w-24 h-24 object-cover rounded-xl border border-primary/10 shadow-md"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&q=80" 
+                alt="Design" 
+                className="w-24 h-24 object-cover rounded-xl border border-primary/10 shadow-md -mt-4"
+              />
+            </div>
+          </div>
         </motion.div>
 
         {/* Projects Grid */}

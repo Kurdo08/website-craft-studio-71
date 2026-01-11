@@ -33,7 +33,7 @@ const WhyUsSection = () => {
             </span>
             <h2 className="section-title text-left mb-4">{t.about.subtitle}</h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Wij helpen ambitieuze bedrijven hun digitale aanwezigheid te transformeren met vakmanschap en verfijning.
+              Van concept tot lancering, wij leveren excellentie. Wij helpen ambitieuze bedrijven hun digitale aanwezigheid te transformeren met vakmanschap en verfijning.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
