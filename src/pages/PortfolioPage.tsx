@@ -14,18 +14,28 @@ const PortfolioPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24">
-        <section className="section-padding bg-gradient-luxury relative">
-          <div className="absolute inset-0 opacity-20 bg-noise mix-blend-overlay" />
-          <div className="container mx-auto container-padding relative text-center">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">{t.pages.portfolio.hero}</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t.pages.portfolio.heroSubtitle}</p>
+        {/* Hero with Image */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80" 
+              alt="Portfolio"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
+          </div>
+          <div className="container mx-auto container-padding relative">
+            <div className="max-w-2xl">
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">{t.pages.portfolio.hero}</h1>
+              <p className="text-lg text-muted-foreground">{t.pages.portfolio.heroSubtitle}</p>
+            </div>
           </div>
         </section>
 
         <section className="section-padding">
           <div className="container mx-auto container-padding">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project) => (
+              {projects.slice(0, 4).map((project) => (
                 <Link key={project.id} to={`/portfolio/${project.id}`} className="group block">
                   <Card className="overflow-hidden bg-card/50 border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl h-full">
                     <div className="relative overflow-hidden aspect-[4/3]">
