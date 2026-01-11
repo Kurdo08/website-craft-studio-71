@@ -89,23 +89,21 @@ const HeroSection = () => {
             variants={fadeInUp}
           >
             <div className="relative">
-              {/* Main Visual Card */}
-              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-primary/10 glow-navy">
-                <div className="flex items-center gap-2 mb-6">
+              {/* Main Visual Card - Website Screenshot */}
+              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-primary/10 glow-navy group">
+                <div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-primary/10">
                   <div className="w-3 h-3 rounded-full bg-destructive/80" />
                   <div className="w-3 h-3 rounded-full bg-warning/80" />
                   <div className="w-3 h-3 rounded-full bg-success/80" />
+                  <span className="ml-2 text-xs text-muted-foreground font-mono">webstudio.nl</span>
                 </div>
-                <div className="space-y-4">
-                  <div className="h-10 bg-gradient-navy rounded-lg w-3/4 opacity-20" />
-                  <div className="h-4 bg-muted rounded w-full" />
-                  <div className="h-4 bg-muted rounded w-5/6" />
-                  <div className="h-4 bg-muted rounded w-4/6" />
-                  <div className="grid grid-cols-3 gap-4 mt-8">
-                    <div className="aspect-square bg-primary/10 rounded-xl border border-primary/20" />
-                    <div className="aspect-square bg-primary/15 rounded-xl border border-primary/20" />
-                    <div className="aspect-square bg-primary/20 rounded-xl border border-primary/20" />
-                  </div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" 
+                    alt="Website Preview"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
                 </div>
 
                 {/* Decorative overlay */}
