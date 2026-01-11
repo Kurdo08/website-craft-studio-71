@@ -227,6 +227,105 @@ export const projects: Project[] = [
       'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200&q=80',
     ],
   },
+  {
+    id: 'rijscholenadvies-bureau',
+    title: 'Rijscholenadvies Bureau',
+    category: {
+      nl: 'Platform',
+      en: 'Platform',
+    },
+    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
+    tags: ['Platform', 'Matching', 'Reviews'],
+    description: {
+      nl: 'Een platform dat mensen helpt bij het vinden van de beste rijscholen in hun buurt.',
+      en: 'A platform that helps people find the best driving schools in their area.',
+    },
+    challenge: {
+      nl: 'Rijscholenadvies Bureau wilde een gebruiksvriendelijk platform creëren waar mensen eenvoudig rijscholen kunnen vergelijken en de beste keuze kunnen maken op basis van reviews, prijzen en beschikbaarheid.',
+      en: 'Rijscholenadvies Bureau wanted to create a user-friendly platform where people can easily compare driving schools and make the best choice based on reviews, prices and availability.',
+    },
+    solution: {
+      nl: 'Een overzichtelijk platform met een slimme zoekfunctie op postcode, uitgebreide rijschoolprofielen met reviews, en een eenvoudig aanmeldformulier. Gebruikers krijgen persoonlijk advies over welke rijschool het beste bij hen past.',
+      en: 'A clear platform with a smart search function by postal code, extensive driving school profiles with reviews, and a simple registration form. Users receive personal advice on which driving school suits them best.',
+    },
+    results: {
+      nl: 'Meer dan 2.000 succesvolle matches in het eerste jaar. Gemiddelde reviewscore van 4.7 sterren. 85% van de gebruikers beveelt het platform aan.',
+      en: 'More than 2,000 successful matches in the first year. Average review score of 4.7 stars. 85% of users recommend the platform.',
+    },
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Google Maps API', 'Tailwind CSS'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80',
+      'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&q=80',
+      'https://images.unsplash.com/photo-1562979314-bee7453e911c?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'phone-recovery',
+    title: 'Phone Recovery',
+    category: {
+      nl: 'Webshop',
+      en: 'E-commerce',
+    },
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80',
+    tags: ['E-commerce', 'Refurbished', 'Tech'],
+    description: {
+      nl: 'Een webshop voor refurbished telefoons met optionele encrypted systemen.',
+      en: 'A webshop for refurbished phones with optional encrypted systems.',
+    },
+    challenge: {
+      nl: 'Phone Recovery wilde een betrouwbare webshop opzetten waar klanten met vertrouwen refurbished telefoons kunnen kopen, inclusief opties voor privacy-bewuste klanten die geïnteresseerd zijn in encrypted systemen.',
+      en: 'Phone Recovery wanted to set up a reliable webshop where customers can confidently buy refurbished phones, including options for privacy-conscious customers interested in encrypted systems.',
+    },
+    solution: {
+      nl: 'Een overzichtelijke webshop met duidelijke productcategorieën, uitgebreide garantie-informatie en een speciale sectie voor encrypted toestellen. Transparante prijzen en kwaliteitsgaranties zorgen voor vertrouwen.',
+      en: 'A clear webshop with clear product categories, extensive warranty information and a special section for encrypted devices. Transparent prices and quality guarantees ensure trust.',
+    },
+    results: {
+      nl: 'Omzetstijging van 150% binnen 8 maanden. Encrypted telefoons werden een bestseller met 40% van de totale verkoop.',
+      en: 'Revenue increase of 150% within 8 months. Encrypted phones became a bestseller with 40% of total sales.',
+    },
+    technologies: ['WooCommerce', 'WordPress', 'Stripe', 'Custom Plugin', 'Mailchimp'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80',
+      'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80',
+      'https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=1200&q=80',
+    ],
+  },
+  {
+    id: 'promotioncars',
+    title: 'PromotionCars',
+    category: {
+      nl: 'Verhuurplatform',
+      en: 'Rental Platform',
+    },
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80',
+    tags: ['Verhuur', 'Luxe Auto\'s', 'Reserveringen'],
+    description: {
+      nl: 'Een premium verhuurplatform voor luxe auto\'s zoals Mercedes G-Wagon, Seat Cupra en Volvo.',
+      en: 'A premium rental platform for luxury cars like Mercedes G-Wagon, Seat Cupra and Volvo.',
+    },
+    challenge: {
+      nl: 'PromotionCars wilde een professioneel platform waar klanten eenvoudig luxe auto\'s kunnen huren voor speciale gelegenheden, fotoshoots of zakelijke evenementen. Geen supercars, maar toegankelijke luxe.',
+      en: 'PromotionCars wanted a professional platform where customers can easily rent luxury cars for special occasions, photoshoots or business events. No supercars, but accessible luxury.',
+    },
+    solution: {
+      nl: 'Een stijlvol platform met een uitgebreide vloot van premium auto\'s, eenvoudig reserveringssysteem en transparante prijzen. High-quality foto\'s en 360° views van elke auto zorgen voor de juiste verwachtingen.',
+      en: 'A stylish platform with an extensive fleet of premium cars, easy reservation system and transparent prices. High-quality photos and 360° views of each car ensure the right expectations.',
+    },
+    results: {
+      nl: 'Bezettingsgraad van 78% in het eerste kwartaal. De Mercedes G-Wagon is de populairste keuze met 35% van alle boekingen.',
+      en: 'Occupancy rate of 78% in the first quarter. The Mercedes G-Wagon is the most popular choice with 35% of all bookings.',
+    },
+    technologies: ['React', 'Supabase', 'Stripe', 'Calendly', 'Tailwind CSS'],
+    websiteUrl: 'https://example.com',
+    gallery: [
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80',
+      'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=1200&q=80',
+      'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80',
+    ],
+  },
 ];
 
 export const getProjectById = (id: string): Project | undefined => {

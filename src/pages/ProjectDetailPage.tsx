@@ -33,33 +33,46 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-12">
           <div className="container mx-auto container-padding">
-            <img src={project.gallery[0]} alt={project.title} className="w-full rounded-2xl shadow-2xl mb-16" />
+            {/* Smaller hero image */}
+            <div className="relative aspect-[21/9] max-h-[400px] overflow-hidden rounded-2xl shadow-2xl mb-12">
+              <img src={project.gallery[0]} alt={project.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
+            </div>
             
             <div className="grid lg:grid-cols-3 gap-12">
-              <div className="lg:col-span-2 space-y-12">
-                <div>
+              <div className="lg:col-span-2 space-y-10">
+                <div className="bg-soft rounded-xl p-6">
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">{t.portfolio.challenge}</h2>
                   <p className="text-muted-foreground leading-relaxed">{project.challenge[language]}</p>
                 </div>
-                <div>
+                <div className="bg-soft rounded-xl p-6">
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">{t.portfolio.solution}</h2>
                   <p className="text-muted-foreground leading-relaxed">{project.solution[language]}</p>
                 </div>
-                <div>
+                <div className="bg-soft rounded-xl p-6">
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">{t.portfolio.results}</h2>
                   <p className="text-muted-foreground leading-relaxed">{project.results[language]}</p>
                 </div>
               </div>
               
               <div className="space-y-8">
-                <div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-4">{t.portfolio.technologies}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, i) => (
-                      <Badge key={i} className="bg-primary/10 text-primary border-none">{tech}</Badge>
-                    ))}
+                <div className="bg-card border border-border/50 rounded-xl p-6">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-4">Project Details</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <span className="text-sm text-muted-foreground">Categorie</span>
+                      <p className="font-medium text-foreground">{project.category[language]}</p>
+                    </div>
+                    <div>
+                      <span className="text-sm text-muted-foreground">Tools & Platforms</span>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {project.technologies.map((tech, i) => (
+                          <Badge key={i} className="bg-primary/10 text-primary border-none">{tech}</Badge>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {project.websiteUrl && (
