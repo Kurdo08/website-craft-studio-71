@@ -347,3 +347,36 @@ export const getPrevProject = (currentId: string): Project | undefined => {
   }
   return projects[currentIndex - 1];
 };
+
+{
+  id: 'jouw-project-id',           // Unieke ID (gebruikt in URL)
+  title: 'Learn-buddy',            // Titel
+  category: {
+    nl: 'Categorie NL',
+    en: 'Category EN',
+  },
+  image: 'https://elearningindustry.com/ai-as-a-study-buddy-helping-students-learn-smarter', // Hoofdafbeelding
+  tags: ['Tag1', 'Tag2', 'Tag3'],    // Labels
+  description: {
+    nl: 'Korte beschrijving...',
+    en: 'Short description...',
+  },
+  challenge: {
+    nl: 'Uitdaging tekst...',
+    en: 'Challenge text...',
+  },
+  solution: {
+    nl: 'Oplossing tekst...',
+    en: 'Solution text...',
+  },
+  results: {
+    nl: 'Resultaten tekst...',
+    en: 'Results text...',
+  },
+  technologies: ['React', 'Tailwind CSS'],
+  websiteUrl: 'https://learn-buddy.nl',  // Optioneel
+  gallery: [                          // Extra afbeeldingen
+    '/pad/naar/screenshot1.png',
+    '/pad/naar/screenshot2.png',
+  ],
+}
