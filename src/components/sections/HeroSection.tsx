@@ -83,14 +83,14 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Visual */}
+          {/* Visual - Interactive Mockup with Homepage Screenshots */}
           <motion.div 
             className="relative hidden lg:block"
             variants={fadeInUp}
           >
             <div className="relative">
-              {/* Main Visual Card - Website Screenshot */}
-              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-primary/10 glow-navy group">
+              {/* Main Mockup - Front */}
+              <div className="relative bg-card backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-primary/10 glow-navy group z-10">
                 <div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-primary/10">
                   <div className="w-3 h-3 rounded-full bg-destructive/80" />
                   <div className="w-3 h-3 rounded-full bg-warning/80" />
@@ -98,22 +98,33 @@ const HeroSection = () => {
                   <span className="ml-2 text-xs text-muted-foreground font-mono">webstudio.nl</span>
                 </div>
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" 
-                    alt="Website Preview"
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  <iframe 
+                    src="/"
+                    title="Homepage Preview"
+                    className="w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
                 </div>
+              </div>
 
-                {/* Decorative overlay */}
-                <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-                  <div className="shine-effect absolute inset-0" />
+              {/* Second Mockup - Behind */}
+              <div className="absolute top-8 -right-8 w-full bg-card backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-primary/10 -z-10 opacity-60">
+                <div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-primary/10">
+                  <div className="w-3 h-3 rounded-full bg-destructive/80" />
+                  <div className="w-3 h-3 rounded-full bg-warning/80" />
+                  <div className="w-3 h-3 rounded-full bg-success/80" />
+                  <span className="ml-2 text-xs text-muted-foreground font-mono">webstudio.nl</span>
+                </div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <iframe 
+                    src="/"
+                    title="Homepage Preview 2"
+                    className="w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none"
+                  />
                 </div>
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float">
+              <div className="absolute -top-4 -left-4 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float z-20">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-navy rounded-lg flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-white" />
@@ -125,7 +136,7 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float" style={{ animationDelay: '1s' }}>
+              <div className="absolute -bottom-6 left-8 bg-card rounded-xl px-5 py-3 shadow-xl border border-primary/20 animate-float z-20" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map((i) => (
