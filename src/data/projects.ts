@@ -326,6 +326,35 @@ export const projects: Project[] = [
       'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80',
     ],
   },
+  {
+    id: 'learn-buddy',
+    title: 'Learn-Buddy',
+    category: {
+      nl: 'AI Platform',
+      en: 'AI Platform',
+    },
+    image: 'https://elearningindustry.com/wp-content/uploads/2024/04/AI-As-A-Study-Buddy-Helping-Students-Learn-Smarter.jpg',
+    tags: ['AI', 'Education', 'Platform'],
+    description: {
+      nl: 'Een AI-gestuurd leerplatform dat studenten helpt slimmer te studeren.',
+      en: 'An AI-powered learning platform that helps students study smarter.',
+    },
+    challenge: {
+      nl: 'Studenten hebben moeite met effectief studeren en het onthouden van leerstof.',
+      en: 'Students struggle with effective studying and retaining learning material.',
+    },
+    solution: {
+      nl: 'Een slim AI-platform dat persoonlijke studieplannen maakt en helpt bij het leren.',
+      en: 'A smart AI platform that creates personal study plans and assists with learning.',
+    },
+    results: {
+      nl: 'Studenten behalen betere resultaten met minder studietijd.',
+      en: 'Students achieve better results with less study time.',
+    },
+    technologies: ['React', 'AI', 'Node.js', 'Tailwind CSS'],
+    websiteUrl: 'https://learn-buddy.nl',
+    gallery: [],
+  },
 ];
 
 export const getProjectById = (id: string): Project | undefined => {
@@ -347,36 +376,3 @@ export const getPrevProject = (currentId: string): Project | undefined => {
   }
   return projects[currentIndex - 1];
 };
-
-{
-  id: 'jouw-project-id',           // Unieke ID (gebruikt in URL)
-  title: 'Learn-buddy',            // Titel
-  category: {
-    nl: 'Categorie NL',
-    en: 'Category EN',
-  },
-  image: 'https://elearningindustry.com/ai-as-a-study-buddy-helping-students-learn-smarter', // Hoofdafbeelding
-  tags: ['Tag1', 'Tag2', 'Tag3'],    // Labels
-  description: {
-    nl: 'Korte beschrijving...',
-    en: 'Short description...',
-  },
-  challenge: {
-    nl: 'Uitdaging tekst...',
-    en: 'Challenge text...',
-  },
-  solution: {
-    nl: 'Oplossing tekst...',
-    en: 'Solution text...',
-  },
-  results: {
-    nl: 'Resultaten tekst...',
-    en: 'Results text...',
-  },
-  technologies: ['React', 'Tailwind CSS'],
-  websiteUrl: 'https://learn-buddy.nl',  // Optioneel
-  gallery: [                          // Extra afbeeldingen
-    '/pad/naar/screenshot1.png',
-    '/pad/naar/screenshot2.png',
-  ],
-}
