@@ -34,8 +34,18 @@ const PortfolioPage = () => {
 
         <section className="section-padding">
           <div className="container mx-auto container-padding">
+            {/* Section Header */}
+            <div className="mb-12">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+                {language === 'nl' ? 'Meest Recente Projecten' : 'Most Recent Projects'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'nl' ? 'Een selectie van onze laatste werk' : 'A selection of our latest work'}
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(0, 4).map((project) => (
+              {projects.map((project) => (
                 <Link key={project.id} to={`/portfolio/${project.id}`} className="group block">
                   <Card className="overflow-hidden bg-card/50 border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl h-full">
                     <div className="relative overflow-hidden aspect-[4/3]">
