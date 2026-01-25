@@ -11,9 +11,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-luxury">
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[100px]" />
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto container-padding relative">

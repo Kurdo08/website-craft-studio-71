@@ -17,7 +17,7 @@ const WhyUsSection = () => {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden bg-soft">
+    <section className="section-padding relative overflow-hidden section-divider">
       <motion.div 
         ref={ref}
         className="container mx-auto container-padding"
@@ -57,7 +57,7 @@ const WhyUsSection = () => {
 
           {/* Stats Card */}
           <motion.div className="relative" variants={slideInRight}>
-            <div className="bg-card rounded-2xl p-8 border border-primary/10 shadow-xl glow-navy">
+            <div className="bg-card rounded-2xl p-8 border border-primary/20 card-shadow-xl glow-navy">
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { value: '150+', label: 'Projecten' },

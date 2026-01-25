@@ -18,9 +18,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden bg-secondary/30">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
+    <section className="section-padding relative overflow-hidden section-divider">
       <motion.div 
         ref={ref}
         className="container mx-auto container-padding"
@@ -40,7 +38,7 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div key={index} variants={fadeInUp}>
-              <Card className="group bg-card hover:bg-card transition-all duration-500 hover:shadow-xl border-border/50 hover:border-primary/30 h-full">
+              <Card className="group bg-card hover:bg-card transition-all duration-500 card-shadow hover:card-shadow-xl border-border/50 hover:border-primary/30 h-full">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-gradient-navy rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
