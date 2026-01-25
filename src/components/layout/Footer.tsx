@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-10">
+    <footer className="bg-card border-t border-border py-10">
       <div className="container mx-auto container-padding">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Brand */}
@@ -23,20 +23,20 @@ const Footer = () => {
 
           {/* Quick Links */}
           <nav className="flex flex-wrap gap-6 text-sm">
-            <Link to="/" className="text-background/70 hover:text-primary transition-colors">{t.nav.home}</Link>
-            <Link to="/services" className="text-background/70 hover:text-primary transition-colors">{t.nav.services}</Link>
-            <Link to="/portfolio" className="text-background/70 hover:text-primary transition-colors">{t.nav.portfolio}</Link>
-            <Link to="/about" className="text-background/70 hover:text-primary transition-colors">{t.nav.about}</Link>
-            <Link to="/quote" className="text-background/70 hover:text-primary transition-colors">{t.nav.quote}</Link>
+            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">{t.nav.home}</Link>
+            <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">{t.nav.services}</Link>
+            <Link to="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">{t.nav.portfolio}</Link>
+            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">{t.nav.about}</Link>
+            <Link to="/quote" className="text-muted-foreground hover:text-primary transition-colors">{t.nav.quote}</Link>
           </nav>
 
           {/* Contact */}
           <div className="flex items-center gap-4 text-sm">
-            <a href="tel:+31612345678" className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors">
+            <a href="tel:+31612345678" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
               <span>+31 6 12345678</span>
             </a>
-            <a href="mailto:info@webstudio.nl" className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors">
+            <a href="mailto:info@webstudio.nl" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
               <span>info@webstudio.nl</span>
             </a>
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-8 pt-6 border-t border-background/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-background/50">
+        <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>© {currentYear} WebStudio. {t.footer.rights}</p>
           <div className="flex gap-4">
             <Link to="/privacy" className="hover:text-primary transition-colors">{t.footer.privacy}</Link>

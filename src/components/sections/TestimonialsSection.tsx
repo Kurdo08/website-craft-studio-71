@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden bg-soft">
+    <section className="section-padding relative overflow-hidden section-divider">
       <motion.div 
         ref={ref}
         className="container mx-auto container-padding"
@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div key={index} variants={fadeInUp}>
-              <Card className="bg-card hover:bg-card transition-all duration-500 border-border/50 hover:border-primary/30 hover:shadow-xl h-full">
+              <Card className="bg-card hover:bg-card transition-all duration-500 border-border/50 hover:border-primary/30 card-shadow hover:card-shadow-xl h-full">
                 <CardContent className="p-6">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <Quote className="w-5 h-5 text-primary" />

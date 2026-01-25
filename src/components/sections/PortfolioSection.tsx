@@ -17,8 +17,7 @@ const PortfolioSection = () => {
   const displayProjects = projects.filter(p => recentProjectIds.includes(p.id));
 
   return (
-    <section className="section-padding relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    <section className="section-padding relative overflow-hidden section-divider">
       
       <motion.div 
         ref={ref}
@@ -37,7 +36,7 @@ const PortfolioSection = () => {
           {displayProjects.map((project, index) => (
             <motion.div key={project.id} variants={fadeInUp}>
               <Link to={`/portfolio/${project.id}`} className="group block">
-                <Card className="overflow-hidden bg-card border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl h-full">
+                <Card className="overflow-hidden bg-card border-border/50 hover:border-primary/30 transition-all duration-500 card-shadow hover:card-shadow-xl h-full">
                   <div className="relative overflow-hidden aspect-[16/10]">
                     <img
                       src={project.image}
